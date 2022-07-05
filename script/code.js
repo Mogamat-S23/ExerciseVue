@@ -1,3 +1,24 @@
+
+const app = Vue.createApp({
+    data: function(){
+        return{
+            show: false
+        }
+    },
+    methods:{
+        handleKeyPressed(e){
+            console.log(e)
+            console.log(e.key);
+            if (e.code = 'KeyA') {
+                this.show = true
+            }
+            if (e.code != 'KeyA'){
+                this.show = false
+            }
+        }
+    }
+})
+app.mount('#app')
 //  const app = Vue.createApp({
      
 //     template: `
@@ -22,38 +43,38 @@
 // app.mount('#app');  
 
 
-const app = Vue.createApp({
+// const app = Vue.createApp({
    
-         template:`
-         <form>
-         <input type='text' placeholder='name' v-model= 'FirstName' required>
+//          template:`
+//          <form>
+//          <input type='text' placeholder='name' v-model= 'FirstName' required>
        
-         <input type='number' placeholder='age' v-model= 'Age' required>
-         <button v-on:click.prevent= 'display' >Click Me</button>
-         </form>
-         <div v-if='isVisible' id='box1'>
-         <p>{{FirstName}}  {{LastName}}  is {{Age}} old and feeling good</p>
-         </div>
-         `,
-         data: function() {
-            return{
-             FirstName:'',
+//          <input type='number' placeholder='age' v-model= 'Age' required>
+//          <button v-on:click.prevent= 'display' >Click Me</button>
+//          </form>
+//          <div v-if='isVisible' id='box1'>
+//          <p>{{FirstName}}  {{LastName}}  is {{Age}} old and feeling good</p>
+//          </div>
+//          `,
+//          data: function() {
+//             return{
+//              FirstName:'',
                 
-             Age:0,
-             isVisible:false
-            }
-         },
-         methods:{
-            display(){
-                if(this.Age > 17) {
-                    this.isVisible = true;
-                }else {
-                    this.isVisible = false;
+//              Age:0,
+//              isVisible:false
+//             }
+//          },
+//          methods:{
+//             display(){
+//                 if(this.Age > 17) {
+//                     this.isVisible = true;
+//                 }else {
+//                     this.isVisible = false;
                     
-                }
-            }
-         }
+//                 }
+//             }
+//          }
    
-    });
-    //NEED TO MOUNT IT
-    app.mount('#app');
+//     });
+//     //NEED TO MOUNT IT
+//     app.mount('#app');

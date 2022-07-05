@@ -9,7 +9,9 @@
 </head>
 <body>
     <div id="app">
-        <!-- <p>{{greeting}}</p> -->
+        <input type='text' placeholder='Saleem i did 
+        it for you' @keypress='handleKeyPressed'/>
+        <p id="p" v-if="show">You pressed a/A key</p>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>

@@ -38,7 +38,7 @@ const app = Vue.createApp({
          data: function() {
             return{
              FirstName:'',
-             
+                
              Age:0,
              isVisible:false
             }
@@ -49,6 +49,7 @@ const app = Vue.createApp({
                     this.isVisible = true;
                 }else {
                     this.isVisible = false;
+                    
                 }
             }
          }
